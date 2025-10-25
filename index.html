@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EduConnect</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://maps.googleapis.com/maps/api/js?key=TU_API_KEY&libraries=places" defer></script>
+</head>
+
+<body>
+
+  <!-- ====================== HEADER ======================= -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="imagenes/logo.jpg" alt="Logo EduConnect" class="logo">
+      </div>
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#funciona">¿Quines somos?</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#carrusel">Galería</a>
+        <a href="#publicidad">Promociones</a>
+        <a href="#ubicacion">Ubicaciones</a>
+        <a href="#registroPadres">Padres</a>
+        <a href="#registroInstructores">Instructores</a>
+        <a href="#pago">Pagos</a>
+        <a href="#consultas">Consultas</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ====================== HERO ======================= -->
+  <section id="inicio" class="hero">
+    <img src="imagenes/imagen_portada.png" alt="Niños aprendiendo" class="hero-img">
+  </section>
+
+  <!-- ====================== FUNCIONA ======================= -->
+  <section id="funciona" class="seccion coral">
+    <h2>¿Quienes Somos?</h2>
+    <div class="steps">
+      <div class="step card"><h3>1️⃣ Mision</h3><p>Conectar a familias con academias e instructores verificados, facilitando el acceso a actividades extracurriculares seguras, personalizadas y de calidad.</p></div>
+      <div class="step card"><h3>2️⃣ Vision</h3><p>Ser la plataforma educativa líder en Latinoamérica que transforma la forma en que las familias descubren y reservan experiencias de aprendizaje.</p></div>
+      <div class="step card"><h3>3️⃣ Valores</h3>
+        <p>Confianza: Seguridad y verificación en cada conexión.</p>
+        <p>Innovación: Tecnología al servicio del aprendizaje.</p>
+        <p>Calidad: Actividades que inspiran desarrollo integral.</p>        
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== BENEFICIOS ======================= -->
+  <section id="beneficios" class="seccion">
+    <h2>Beneficios</h2>
+    <div class="benefits-grid">
+      <div class="benefit card">
+        <h3>Para Padres</h3>
+        <ul>
+          <li><i class="bi bi-person-bounding-box"></i> Instructores verificados</li>
+          <li><i class="bi bi-reception-4"></i> Reportes de avance</li>
+          <li><i class="bi bi-receipt"></i> Materiales y grabaciones</li>
+        </ul>
+      </div>
+      <div class="benefit card">
+        <h3>Para Instructores</h3>
+        <ul>
+          <li><i class="bi bi-laptop"></i> Gestiona tus clases</li>
+          <li><i class="bi bi-cash-stack"></i> Recibe pagos seguros</li>
+          <li><i class="bi bi-clipboard-data"></i> Accede a estadísticas</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====================== GALERÍA ======================= -->
+  <section id="carrusel" class="seccion coral">
+    <h2>Galería</h2>
+    <div class="carousel">
+      <button class="carousel-btn prev">‹</button>
+      <div class="carousel-track" id="carouselTrack">
+        <img src="imagenes/arte.png" alt="Arte" class="carousel-item">
+        <img src="imagenes/tecnologia.png" alt="Tecnologia" class="carousel-item">
+        <img src="imagenes/bienestar.png" alt="Bienestar" class="carousel-item">
+        <img src="imagenes/deportes.png" alt="Deportes" class="carousel-item">
+      </div>
+      <button class="carousel-btn next">›</button>
+    </div>
+    <div id="carouselDots" class="carousel-dots"></div>
+  </section>
+
+  <!-- ====================== PROMOCIONES ======================= -->
+  <section id="publicidad" class="seccion">
+    <h2>Promociones</h2>
+    <div class="ad-row">
+      <div class="ad-card"><img src="imagenes/tecnologia.png" class="ad-media"><div class="ad-caption">Taller de Robótica</div></div>
+      <div class="ad-card"><img src="imagenes/clase_mate.jpeg" class="ad-media"><div class="ad-caption">Matemática divertida</div></div>
+      <div class="ad-card"><img src="imagenes/clases_ingles.jpeg" class="ad-media"><div class="ad-caption">Clases de Inglés</div></div>
+    </div>
+  </section>
+
+  <!-- ====================== UBICACIÓN ======================= -->
+  <section id="ubicacion" class="seccion coral">
+    <h2>Ubicaciones</h2>
+    <p>Autoriza la ubicación para ver talleres cercanos.</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"></iframe>
+  </section>
+
+  <!-- ====================== REGISTROS ======================= -->
+  <section id="registroPadres" class="seccion">
+    <h2>Registro — Padres</h2>
+    <form id="formPadres" class="form-card">
+      <label>Nombre <input name="nombre" required></label>
+      <label>Correo <input name="email" type="email" required></label>
+      <label>Distrito <input name="distrito" required></label>
+      <label>Contraseña <input name="password" type="password" required></label>
+      <button type="submit" class="btn-submit">Registrar</button>
+    </form>
+  </section>
+
+  <section id="registroInstructores" class="seccion coral">
+    <h2>Registro — Instructores</h2>
+    <form id="formInstructores" class="form-card">
+      <label>Nombre <input name="nombre" required></label>
+      <label>Correo <input name="email" type="email" required></label>
+      <label>Especialidad <input name="especialidad" required></label>
+      <label>Contraseña <input name="password" type="password" required></label>
+      <button type="submit" class="btn-submit">Registrar</button>
+    </form>
+  </section>
+
+  <!-- ====================== PASARELA DE PAGO ======================= -->
+  <section id="pago" class="seccion">
+    <h2>Pasarela de Pago</h2>
+    <form id="formPago" class="form-card">
+      <label>Nombre del titular <input name="nombre" required></label>
+      <label>Monto a pagar (S/.) <input name="amount" type="number" min="1" required></label>
+      <label>Número de tarjeta <input name="tarjeta" maxlength="16" required></label>
+      <label>Fecha de expiración <input name="fecha" type="month" required></label>
+      <label>CVV <input name="cvv" maxlength="3" required></label>
+      <button type="submit" class="btn-submit">Realizar pago</button>
+      <p id="payMsg" class="msg"></p>
+    </form>
+  </section>
+
+  <!-- ====================== CONSULTAS ======================= -->
+  <section id="consultas" class="seccion coral">
+    <h2>Consultas</h2>
+    <form id="formConsultas" class="form-card">
+      <label>Nombre <input name="nombre" required></label>
+      <label>Correo <input name="email" type="email" required></label>
+      <label>Mensaje <textarea name="mensaje" rows="4" required></textarea></label>
+      <button type="submit" class="btn-submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- ====================== REDES Y FOOTER ======================= -->
+  <section class="seccion">
+    <h2>Síguenos</h2>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=61582469894930" target="_blank"><i class="bi bi-facebook"></i></a>
+      <a href="#"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-youtube"></i></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2025 EduConnect | Derechos Reservados</div>
+      <div>Métricas: Visitas <span id="m_visitas">0</span> | Registros <span id="m_reg">0</span> | Pagos <span id="m_pagos">0</span></div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
